@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: exagon-admin-mariadb
+        ports:
+            - 8892:80
+        environment:
+            - PMA_HOST=172.17.0.1
+            - PMA_PORT=4407
