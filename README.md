@@ -1,15 +1,20 @@
-# Hexagonal Architecture
+# Hexagonal Architecture Example Project
+
+This is a repository is intended to perform an example with an hexagonal architectural design for Domain-Driven Design aproach. \
+In each step of development it will apply and explain Test-Driven Design practices and SOLID principles too.
+
 The Hexagonal Architecture, or Ports & Adapters architecture, is an architectural pattern used in software design. It aims at creating loosely coupled application components that can be easily connected to their software environment by means of ports and adapters. This divides a system into several loosely-coupled interchangeable components, such as the application core, the database, the user interface, test scripts and interfaces with other systems. This approach is an alternative to the traditional layered architecture. \
 According to some authors, the hexagonal architecture is at the origin of the microservices architecture.
 
-This is a example project with an hexagonal architectural design for DDD, including TDD and SOLID principles.
-
-## Configuration
+# Main Configuration
 In the case of Docker for Linux (standard distribution), the IP address of the host will always be 172.17.0.1. But to ensure this, run the following command for continuing `docker-compose.yml` settings.
 ```
 $ docker network inspect bridge -f '{{range .IPAM.Config}}{{.Gateway}}{{end}}'
 ```
+
 Regarding any service or interface port, they can be modified.
+
+Each service and interface has its own documentation.
 
 # Driven Services
 
