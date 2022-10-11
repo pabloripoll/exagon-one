@@ -24,7 +24,7 @@ mysql-ssh-root: ## Enter into MySQL container as root - remember to change passw
 	docker exec -it exagon-mysql mysql --user root -p${MYSQL_ROOT_PASSWORD};
 
 mysql-ssh: ## Enter into MySQL container - remember to change password here if it changes on /etc/mariadb/.env
-	docker exec -it exagon-mysql mysql --user ${MYSQL_USER} -p${An0thrS3crt};
+	docker exec -it exagon-mysql mysql --user ${MYSQL_USER} -p${MYSQL_PASSWORD};
 
 mysql-admin-start: ## Build / Start phpMyAdmin for MySQL container
 	cd ./etc/mysql/phpmyadmin; docker-compose up -d
@@ -50,7 +50,7 @@ mariadb-ssh-root: ## Enter into MariaDb container as root - remember to change p
 	docker exec -it exagon-mariadb mariadb --user root -p${MYSQL_ROOT_PASSWORD};
 
 mariadb-ssh: ## Enter into MariaDb container - remember to change password here if it changes on /etc/mariadb/.env
-	docker exec -it exagon-mariadb mariadb --user ${MYSQL_USER} -p${An0thrS3crt};
+	docker exec -it exagon-mariadb mariadb --user ${MYSQL_USER} -p${MYSQL_PASSWORD};
 
 mariadb-admin-start: ## Build / Start phpMyAdmin for MariaDB container
 	cd ./etc/mariadb/phpmyadmin; docker-compose up -d
