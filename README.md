@@ -18,13 +18,18 @@ Each service and interface has its own documentation.
 
 # Driven Services
 
-### Service 1
-Service 1 is build by NGINX and PHP 8.1 that contains Symfony 6 framework. It automatically install composer and some bundles.
-- NGINX 1.21 on port 8880
-- PHP 8.1 with Composer 2 on port 9000
-- Symfony 6.x is provided as a blank new application, working with Docker support. Some packages have already been installed to help you and spare time :
+## Cli Console
+Each layer has its own Makefile.
+
+### Service 1 with Symfony
+Service 1 is an API built with NGINX 1.21 and PHP-FPM 8.1 for Symfony 6 framework.
+- NGINX port: 8880
+- PHP port: 9000
+
+Symfony 6.x is provided as a blank new application, working with Docker support and automatically install composer with initial required bundles installed:
 - Maker Bundle
 - ORM (with PostgreSQL integration)
+- RabbitMQ
 - Xdebug
 
 Start service as follows
@@ -38,12 +43,12 @@ $ make service1-api-build
 
 ### Databases Storage
 Both MySQL and MariaDb first configuration must be done by root user to grant permissions and set password for exagon_user and can be executed by container shell or enabling phpMyAdmin. See: `make help` command.
-- MySQL on port 4406 *(with phpMyAdmin on port 8891)*
-- MariaDB on port 4407 *(with phpMyAdmin on port 8892)*
-- PostgreSQL *(on development)*
-- Redis *(on development)*
-- MongoDB *(on development)*
-- ElasticSearch *(on development)*
+- MySQL port: 4406 *(with phpMyAdmin on port 8891)*
+- MariaDB port: 4407 *(with phpMyAdmin on port 8892)*
+- PostgreSQL port: 4408 *(on development)*
+- MongoDB port: 4410 *(on development)*
+- Redis port: 4411: *(on development)*
+- ElasticSearch port: 4412 *(on development)*
 
 # Driving Interfaces
 
